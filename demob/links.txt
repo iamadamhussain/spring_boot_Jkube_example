@@ -1,0 +1,166 @@
+https://github.com/shabbirdwd53/Springboot-k8s
+
+https://www.youtube.com/watch?v=VAmntTPebKE
+
+https://www.youtube.com/playlist?list=PLhfxuQVMs-nyQIX8597QLKKhmpDvNX7tu
+
+https://github.com/shabbirdwd53/Springboot-k8s/blob/main/user-service.yml
+
+
+docker build -t demoB.
+
+
+docker images 
+
+$ docker run -p 8089:8089 demob
+
+
+docker stop 40980fe19a71
+
+
+ docker image rm -f demoa
+
+ 
+docker run -p 8080:8080 springio/gs-spring-boot-docker
+
+---------------------
+
+minikube status
+
+minikube start
+
+kubectl get all
+
+kubectl get nodes
+
+kubectl cluster-info
+minikube service list
+
+minikube stop
+------------------
+
+kubectl apply -f ./
+
+kubectl describe pod/demoa-app-7db55747d8-dnh5q   
+
+kubectl get pods
+
+kubectl get svc
+
+kubectl get deployments
+---------------------------
+image build buy minikube
+minikube image build -t pz/demoa .
+minikube image load demob
+
+https://levelup.gitconnected.com/two-easy-ways-to-use-local-docker-images-in-minikube-cd4dcb1a5379
+
+kubectl port-forward deployment.apps/demoa-app  8200:8200
+kubectl port-forward deployment.apps/demob  8100:8100
+
+kubectl port-forward demob-app-5c56cd5576-zgnft 8100:8100
+deployment.apps/demoa-app   1/1     1            1           5m20s
+deployment.apps/demob-app 
+
+-----------------
+
+https://github.com/pixel-point/kube-forwarder
+
+
+minikube dashboard
+
+https://github.com/pixel-point/kube-forwarder
+kubectl apply -f ./
+kubectl delete -f ./
+kubectl logs pod/demoa-app-7db55747d8-757z4 
+
+kubectl describe endpoints demob-svc 
+
+minikube image build -t demoa .
+minikube image build -t spring-microservice .
+minikube image rm image demoa
+
+ kubectl  demoa-app get services
+
+kubectl   delete svc web 
+minikube image ls
+------------------
+
+kubectl create namespace demob-svcn
+
+kubectl create namespace demoa-a
+
+kubectl -n demoa-a describe deployments
+
+kubectl -n demoa-a get pods
+
+kubectl -n demoa-a get pods -o wide
+ curl -I http://172.17.0.5:3000
+ 
+
+ kubectl -n demob-svc get services
+
+kubectl expose deployment deployment.apps/demob-app  --type=LoadBalancer --name=demob-svc
+
+
+kubectl get pod -o wide
+
+https://www.sivalabs.in/kubernetes-ingress/
+
+
+kubectl get ingress -n  demob-svc 
+
+kubectl describe ingress demob-ingress 
+
+kubectl describe ingress -n  demob-svc 
+ kubectl get ingress -n  demob-svc
+
+
+https://gitlab.com/nanuchi/youtube-tutorial-series/-/blob/master/kubernetes-ingress/dashboard-ingress.yaml
+
+https://www.youtube.com/watch?v=80Ew_fsV4rM
+
+kubectl get ingress -n  demob-svc
+
+minikube service demob-svc
+kubectl get namespaces
+
+minikube service demob-svc --url
+
+Kubernetes Ingress Tutorial in detail with Example
+https://www.youtube.com/watch?v=v2x0f70mZec
+
+
+kubectl describe svc demob-svc
+
+kubectl expose deployment demob-app --type=NodePort --port=8100
+
+kubectl get service eclipse-jkube-demo-project-gradle 
+
+minikube service eclipse-jkube-demo-project-gradle  --url
+curl 192.168.49.2:31348/
+https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
+-----------------------------------
+
+ mvn clean install                                                            \
+  mvn  k8s:build         `# Build Docker Image`                                     \
+ mvn  k8s:resource      `# Generate Kubernetes Manifests`                          \
+ mvn  k8s:apply  
+
+---------------------------------
+
+https://github.com/rohankanojia-forks/eclipse-jkube-demo-project-gradle
+https://github.com/rohankanojia-forks/eclipse-jkube-demo-project-gradle
+gradle clean build
+gradle k8sBuild
+docker images | grep demob:0
+docker tag fss/demob  adamcs400
+gradle k8sPush
+gradle k8sResource
+gradle k8sApply
+
+kubectl get pods
+kubectl get svc
+gradle k8sUndeploy
+jkube.generator.name = quay.io/rokumar/eclipse-jkube-demo-project-gradle:1.0.0

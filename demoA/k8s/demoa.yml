@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoa-app
+  labels:
+    app: demoa-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app : demoa-app
+  template:
+    metadata:
+      labels:
+        app: demoa-app
+    spec:
+      containers:
+      - name: demoa-app
+        image: demoa
+        imagePullPolicy: Never
+        ports:
+          - containerPort: 8200
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name:  demoa-svc
+spec:
+  selector:
+    app:  demoa-app
+  ports:
+  - port:  80
+    targetPort:  8200
